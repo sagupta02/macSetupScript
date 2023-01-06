@@ -40,8 +40,8 @@ brew upgrade
 
 # Next steps:
 # - Run these three commands in your terminal to add Homebrew to your PATH:
-echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/sarthakgupta/.zprofile
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/sarthakgupta/.zprofile
+echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/"$SUDO_USER"/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/"$SUDO_USER"/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Install Java
