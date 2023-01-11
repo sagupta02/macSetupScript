@@ -58,6 +58,7 @@ PACKAGES=(
     findutils
     git
     jq
+    zsh
     make
     npm
     nvm
@@ -80,6 +81,9 @@ CASKS=(
     slack
     visual-studio-code
     zoom
+    notion
+    1password
+    utm
 )
 
 echo "Installing cask apps..."
