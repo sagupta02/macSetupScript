@@ -34,9 +34,14 @@ if test ! $(which brew); then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
+# Xcode dev tools are required and will also install git, make,python3 and other useful dev tools so they dont need be to be installed again by homebrew.
+xcode-select --install
+
 brew update
 brew upgrade
 
+# To install Logi Options+ , you need to import cask-drivers
+brew tap homebrew/cask-drivers
 
 # Next steps:
 # - Run these three commands in your terminal to add Homebrew to your PATH:
@@ -56,17 +61,15 @@ PACKAGES=(
     gnu-indent
     gnu-which
     findutils
-    git
     jq
     zsh
-    make
     npm
     nvm
     node
     python
-    python3
     pypy
     wget
+    gnupg
 )
 
 echo "Installing packages..."
@@ -84,8 +87,10 @@ CASKS=(
     notion
     1password
     utm
+    logi-options-plus
 )
 
 echo "Installing cask apps..."
 sudo -u $SUDO_USER brew install --cask ${CASKS[@]}
 
+brew cleanup
