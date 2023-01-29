@@ -19,3 +19,9 @@ Clone the repository into your local system. make sure to run chmod +x install_s
 git config --global user.name "Name"
 git config --global user.email "Email"
 ```
+
+7. Make hidden files visible on mac finder so that you can view /opt, /bin in finder.
+```
+defaults write com.apple.Finder AppleShowAllFiles YES
+```
+Now, Reinitialize the Finder, either by rebooting or right-clicking the Finder while holding down the Option key, then selecting “Relaunch.”

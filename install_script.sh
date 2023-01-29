@@ -70,10 +70,14 @@ PACKAGES=(
     pypy
     wget
     gnupg
+    docker
+    docker-compose
+    awscli
+    colima # This is alternative to docker desktop for runnning docker deamon
 )
 
 echo "Installing packages..."
-brew install ${PACKAGES[@]}
+brew install "${PACKAGES[@]}"
 
 CASKS=(
     stats
@@ -91,6 +95,6 @@ CASKS=(
 )
 
 echo "Installing cask apps..."
-sudo -u $SUDO_USER brew install --cask ${CASKS[@]}
+sudo -u "$SUDO_USER" brew install --cask "${CASKS[@]}"
 
 brew cleanup
